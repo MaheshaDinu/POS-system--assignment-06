@@ -715,6 +715,220 @@ tbody tr:nth-child(even) {
 .order-form-overlay {
   display: none;
 }
+/* Styling for Add New Order Button */
+.place-order-sec > .crud > .button-container > .add-new-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.place-order-sec > .crud > .button-container > .add-new-container > .add-new-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  margin-top: 5vh;
+}
+
+.place-order-sec > .crud > .button-container > .add-new-container > .add-new-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Add New Order Form Overlay */
+.place-order-sec > .crud > .order-form-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Form Container */
+.place-order-sec > .crud > .order-form-overlay > .form-container {
+  background-color: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(100%);
+  animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* Form Header */
+.place-order-sec > .crud > .order-form-overlay > .form-container > h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form Labels and Inputs */
+.place-order-sec > .crud > .order-form-overlay > .form-container > .add-new-form > label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.place-order-sec > .crud > .order-form-overlay > .form-container > .add-new-form > input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Buttons in the Form */
+.place-order-sec > .crud > .order-form-overlay > .form-container > .add-new-form > .close-btn,
+.place-order-sec > .crud > .order-form-overlay > .form-container > .add-new-form > .save-btn {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.place-order-sec > .crud > .order-form-overlay > .form-container > .add-new-form > .close-btn {
+  background-color: #dc3545;
+}
+
+.place-order-sec > .crud > .order-form-overlay > .form-container > .add-new-form > .close-btn:hover {
+  background-color: #c82333;
+}
+
+.place-order-sec > .crud > .order-form-overlay > .form-container > .add-new-form > .save-btn {
+  background-color: #28a745;
+}
+
+.place-order-sec > .crud > .order-form-overlay > .form-container > .add-new-form > .save-btn:hover {
+  background-color: #218838;
+}
+
+.place-order-sec > .crud > .order-form-overlay > .form-container > .add-new-form > button + .place-order-sec > .crud > .order-form-overlay > .form-container > .add-new-form > button {
+  margin-left: 4%;
+}
+
+/* Order Details Form Overlay */
+.place-order-sec > .search-order > .order-form-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Order Details Form Container */
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container {
+  background-color: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+/* Order Form Header */
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-form-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-form-header > h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-form-header > .close-btn {
+  padding: 10px;
+  border: none;
+  color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-form-header > .close-btn:hover {
+  background: transparent;
+  color: #333;
+}
+
+/* Order Details Form Labels and Inputs */
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-detail-form > label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-detail-form > input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Order Form Buttons */
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-detail-form > .delete-btn,
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-detail-form > .edit-btn {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-detail-form > .delete-btn {
+  background-color: #dc3545;
+}
+
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-detail-form > .delete-btn:hover {
+  background-color: #c82333;
+}
+
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-detail-form > .edit-btn {
+  background-color: #28a745;
+}
+
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-detail-form > .edit-btn:hover {
+  background-color: #218838;
+}
+
+.place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-detail-form > button + .place-order-sec > .search-order > .order-form-overlay > .order-form-container > .order-detail-form > button {
+  margin-left: 4%;
+}
+
 .order-table-container {
   width: 80%;
   margin: 30px auto;
